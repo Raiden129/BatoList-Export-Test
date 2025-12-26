@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "BatoList Exporter",
+  "version": "1.2",
+  "description": "Export your Bato lists to CSV, HTML, or JSON.",
+  "permissions": [
+    "activeTab"
+  ],
+  "host_permissions": [
+    "https://bato.si/*",
+    "https://bato.to/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://bato.si/u/*/batolists*",
+        "https://bato.to/u/*/batolists*"
+      ],
+      "js": ["exporter.js"],
+      "css": ["style.css"]
+    }
+  ]
+}
